@@ -1,0 +1,313 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: "montserrat",sans-serif;
+}
+body{
+    background-color: #24252A;
+}
+.navBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid white;
+    
+}
+.logo
+{
+    width: 15%;
+    cursor: pointer;
+}
+.navItems
+{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.navItems li{
+    display: inline-block;
+    margin: 20px 20px;
+}
+.navItems li a{
+    transition: all 1s ease;
+}
+.navItems li a:hover{
+    color: #a0c4ff;
+}
+.navItems li a button{
+   
+    transition: all 1s ease;
+    border:none;
+    background-color: #24252A;
+    color: white;
+}
+.navItems li a button:hover{
+    color: #a0c4ff;
+
+}
+
+.sportsNav{
+    color: white;
+    display: flex;
+    margin: auto;
+    width: fit-content;
+    flex-direction: row;
+
+    
+}
+.deactiveSportsNav{
+    padding: 2%;
+    border: 2px solid black;
+    background-color: rgb(189, 16, 16);
+}
+.activeSportsNav{
+    padding: 2%;
+    border: 2px solid black;
+    background-color: rgb(91, 199, 149);
+}
+
+
+
+.teamLogo{
+    width: 100px;
+    height: 100px;
+}
+
+.matchDiv{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid white;
+    margin: auto;
+    justify-content: space-around;
+    margin-bottom: 50px;
+    width: 85%;
+    /* box-shadow: rgba(250, 250, 250, 0.975) 0px 19px 38px, rgb(255, 255, 255) 0px 15px 12px; */
+    border-radius: 50px;
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+}
+.footScores{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.team{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.winner{
+text-align: center;
+ background: #7fb9ce;
+color: rgb(255, 255, 255);
+ 
+ padding: 2px;
+border-radius: 12px; 
+margin-bottom: 15px;
+margin-top: 15px;
+}
+
+
+
+
+/* button */
+.button-73 {
+  appearance: none;
+  background-color: #FFFFFF;
+  border-radius: 40em;
+  border-style: none;
+  box-shadow: #ADCFFF 0 -12px 6px inset;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -.24px;
+  margin: 0;
+  outline: none;
+  padding: 1rem 1.3rem;
+  quotes: auto;
+  text-align: center;
+  text-decoration: none;
+  transition: all .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-73:hover {
+  background-color: #FFC229;
+  box-shadow: #FF6314 0 -6px 8px inset;
+  transform: scale(1.125);
+}
+
+.button-73:active {
+  transform: scale(1.025);
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.finished{
+    background: #935193;
+    color: white;
+    margin-right: 15px;
+    border-radius: 12px;
+    width: 120px;
+    text-align: center;
+    float: right;
+}
+.live{
+    background: #ff0b0b;
+    color: white;
+    border-radius: 12px;
+    width: 100px;
+    text-align: center;
+    margin-right: 15px;
+    float: right;
+}
+
+.date{
+    background: #7fce86;
+    color: rgb(255, 255, 255);
+    margin-left: 15px;
+    width: fit-content;
+    text-align: center;
+    float: left;
+    padding: 2px;
+    border-radius: 12px;
+}
+.time{
+    background: #7fce86;
+    color: rgb(255, 255, 255);
+    margin-left: 15px;
+    text-align: center;
+    width: fit-content;
+    padding: 2px;
+    border-radius: 12px;
+
+}
+
+.goals{
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(218, 203, 204);
+    position: absolute;
+    left: 49%;
+    padding: 2px;
+}
+
+.matchDiv:hover{
+    transform: scale(1.012);
+    transition: 0.2s;
+}
+
+  
+input[type="checkbox"] {
+    margin:10px;
+    position:relative;
+    width:120px;
+    height:40px;
+    -webkit-appearance: none;
+    background: linear-gradient(0deg, #333, #000);
+    outline: none;
+    border-radius: 20px;
+    box-shadow: 0 0 0 4px #353535, 0 0 0 5px #3e3e3e, inset 0 0 10px rgba(0,0,0,1);
+  }
+
+  
+input:checked[type="checkbox"]{
+    background: linear-gradient(0deg, #70a1ff, #1e90ff);
+    box-shadow: 0 0 0 4px #353535, 0 0 0 5px #3e3e3e, inset 0 0 10px rgba(0,0,0,1);
+  }
+
+
+  input[type="checkbox"]:before {
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:80px;
+    height:40px;
+    background: linear-gradient(0deg, #000, #6b6b6b);
+    border-radius: 20px;
+    box-shadow: 0 0 0 1px #232323;
+    transform: scale(.98,.96);
+    transition:.5s;
+  }
+   
+  input:checked[type="checkbox"]:before {
+    left:40px;
+  }
+  
+  input[type="checkbox"]:after{
+    content:'';
+    position:absolute;
+    top:calc(50% - 2px);
+    left:70px;
+    width:4px;
+    height:4px;
+    background: linear-gradient(0deg, #6b6b6b, #000);
+    border-radius: 50%;
+    transition:.5s;
+  }
+  
+  input:checked[type="checkbox"]:after {
+    left:110px;
+  }
+
+.center h1 {
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+    text-align:center;
+    color:#fff;
+    font-size:10px;
+    padding:5px 0;
+    text-transform: uppercase;
+    letter-spacing:4px;
+  }
+  .center{
+  float: left;
+  margin-left: 7%;
+  }
+
+  .upcoming{
+    background: #9ceba0;
+    color: white;
+    margin-right: 15px;
+    border-radius: 12px;
+    width: 150px;
+    text-align: center;
+    float: right;
+}
+
+.center2 h1 {
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+    text-align:center;
+    color:#fff;
+    font-size:10px;
+    padding:5px 0;
+    text-transform: uppercase;
+    letter-spacing:4px;
+  }
+  .center2{
+  float: right;
+  margin-right: 7%;
+  }

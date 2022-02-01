@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/css/football.css">
+    <title>Football</title>
+</head>
+<body>
+
+    <header>
+        <nav class="navBar">
+            <img src="public/image/logo.jpg" alt="logo" class="logo">
+            <ul class="navItems">
+                
+                <!-- <li><a href="login.html" target="_blank">LOGIN</a></li> -->
+                <li><a href="http://localhost:3004/signup" target="_blank">SIGNUP</a></li>
+                <!-- <li>
+                    <a href="http://localhost:3004/comments" class="contact">
+                        <button>
+                            COMMENT
+                        </button>
+                    </a>
+                </li> -->
+            </ul>
+            
+        </nav>
+    </header>
+
+    <br>
+    <br>
+    <nav class="sportsNav">
+        <div class="activeSportsNav">
+          <a href="http://localhost:3004/football">LIVE/RECENT</a>
+        </div>
+         
+       
+        <div class="deactiveSportsNav">
+            <a href="http://localhost:3004/football/Ranking">
+            RANKING
+        </a>
+        </div>
+        
+         
+        <div class="deactiveSportsNav">
+            <a href="http://localhost:3004/football/news">
+            NEWS
+        </a>
+        </div>
+    </nav>
+
+    <br><br>
+    <h2 style="color: whitesmoke; text-align: center; font-family: cursive">SELECT LEAGUE :- </h2> 
+    
+   
+    <main>
+        
+        
+        <button onclick="bpl()" class="button-73">Premier league</button>
+        <button onclick="seriesA()" class="button-73">Series A</button>
+        <button onClick="UEFA()" class="button-73">UEFA</button>
+        <button onClick="laliga()" class="button-73">La Liga</button>
+       
+       
+    </main>   
+    <br>
+    <hr width="70%" style="margin-left: 15%;">
+
+    <div class="center">
+        <h1> SHOW UPCOMING </h1>
+        <input type="checkbox" name="" class="toggle">
+    </div>
+    <div class="center2">
+        <h1> WITHOUT IMAGES </h1>
+        <input type="checkbox" name="" class="toggle2">
+    </div>
+    <br>
+    <h1 class="loading"></h1>
+    <br>
+
+<section class="liveContent" style="color: white;">
+   
+                      
+
+    
+   
+
+   
+</section>
+
+
+
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="public/java/football.js">
+ 
+
+</script>
+    
+</body>
+</html>

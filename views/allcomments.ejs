@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/css/allcomment.css">
+    <title>Comments</title>
+</head>
+<body>
+    <header>
+        <nav class="navBar">
+            <img src="public/image/logo.jpg" alt="logo" class="logo">
+            <div class="navItems">
+                
+                <!-- <li><a href="login.html" target="_blank">LOGIN</a></li> -->
+                <!-- <li><a href="http://localhost:3004/signup" target="_blank">SIGNUP</a></li> -->
+                <!-- <li>
+                    <a href="http://localhost:3004/home" class="contact">
+                        HOME
+                    </a>
+                </li> -->
+            </div>
+            
+        </nav>
+    </header>
+    <br>
+    <button class="bn632-hover bn24" style="margin-left:43%;">
+        <a href="http://localhost:3004/comments/new" id="addComment">ADD NEW COMMENT</a>
+    </button>
+    <br>
+    <br>
+    <div class="commentSection">
+      
+    <% details.forEach(function(item){ %>
+       <div class="comment">
+    <img src="public/image/avatar.png" class="avatar">
+    <span style="font-size: larger; font-family:Verdana, Geneva, Tahoma, sans-serif;"><%= item.uname%></span>
+    <p><%= item.comment%> </p>
+    <button style="float: right; color:black" class="deleteButton"><a href="http://localhost:3004/comments/<%=item.id%>/edit" style="color: black"> Edit comment</a></button>
+</div>
+
+<% }) %> 
+</div>
+
+    <!-- <div class="title">COMMENTS</div>
+    <% details.forEach(function(item){ %>
+        <div class="comment">  <%= item.comment%> - <%= item.uname%>
+            <a href="http://localhost:3004/comments/<%=item.id%>/edit"> Edit comment</a></div>
+        <% }) %> 
+        <a href="http://localhost:3004/comments/new" id="addComment">ADD COMMENT</a> -->
+
+        
+</body>
+</html>
+
+

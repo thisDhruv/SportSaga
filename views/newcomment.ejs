@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Comment</title>
+    <!-- <link rel="stylesheet" href="public/css/newcomment.css"> -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    font-family: "montserrat",sans-serif;
+}
+body{
+    background-color: #24252A;
+    color: black;
+}
+.navBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid white;
+    
+}
+.logo
+{
+    width: 15%;
+    cursor: pointer;
+}
+.navItems
+{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    
+    
+
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.navItems li{
+    display: inline-block;
+    margin: 20px 20px;
+}
+.navItems li a{
+    transition: all 1s ease;
+}
+.navItems li a:hover{
+    color: #a0c4ff;
+}
+.navItems li a button{
+   
+    transition: all 1s ease;
+    border:none;
+    background-color: #24252A;
+    color: white;
+}
+.navItems li a button:hover{
+    color: #a0c4ff;
+
+}
+
+
+.commentContainer{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 110px;
+    width: 40%;
+    align-items: center;
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: yellow;
+    background: rgba(255, 255, 255, 0.74);
+    border-radius: 25px;
+}
+
+.avatar{
+    width:65px;
+    height: 50px;
+    border-style: outset;
+    margin: 20px;
+    border: 5px solid #6253e1;
+    border-radius: 50% ;
+}
+textarea{
+    width: 400px;
+    height: 100px;
+    font-size: larger;
+}
+.commentButtons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 400px;
+}
+
+
+.bn632-hover {
+    width: 160px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+    height: 55px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 50px;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+  }
+  
+  .bn632-hover:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+  }
+  
+  .bn632-hover:focus {
+    outline: none;
+  }
+  
+  .bn632-hover.bn24 {
+      background-image: linear-gradient(
+        to right,
+        #6253e1,
+        #852d91,
+        #a3a1ff,
+        #f24645
+      );
+      box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
+    }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navBar">
+            <img src="http://localhost:3004/public/image/logo.jpg
+            " alt="logo" class="logo">
+            <div class="navItems">
+                
+                <!-- <li><a href="login.html" target="_blank">LOGIN</a></li> -->
+                <!-- <li><a href="http://localhost:3004/signup" target="_blank">SIGNUP</a></li> -->
+                <!-- <li>
+                    <a href="http://localhost:3004/home" class="contact">
+                        HOME
+                    </a>
+                </li> -->
+            </div>
+            
+        </nav>
+    </header>
+    <br>
+
+
+
+    <div class="commentContainer">
+        <img src="http://localhost:3004/public/image/avatar.png" class="avatar">
+           <form action="http://localhost:3004/comments" method="post">
+            <label for="name" style="font-weight: 700;" >
+                Username : <input type="text" name="uname" id="uname" style="width: 250px;" style="font-weight: 700;">
+            </label>
+            <br>
+        <br>
+        <label for="comment" style="font-weight: 700;" >
+            Comment : <input type="text" name="comment" id="comment" style="width: 250px;" style="font-weight: 700;" >
+        </label>
+        <br><br>
+        <div class="commentButtons">
+            <button class="bn632-hover bn24">
+                ADD COMMENT
+            </button>
+            </div>
+           </form>
+          
+       </div>
+
+
+    <!-- <form action="" method="post">
+        <label for="name">
+            Username : <input type="text" name="uname" id="name">
+        </label>
+        <br>
+        <br>
+        <label for="comment">
+            Comment : <textarea name="comment" id="comment" cols="21" rows=s"10"></textarea>
+        </label>
+        <br><br>
+        <button>Submit</button>
+    </form>
+    <a href="http://localhost:3004/comments">
+        To index page
+    </a> -->
+
+    <!-- <script>
+        var b = window.localStorage.getItem("uname");
+        alert("The Value Received is " + b);
+    </script> -->
+</body>
+</html>

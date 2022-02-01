@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/css/cricket.css">
+    <title>Cricket</title>
+</head>
+<body>
+
+    <header>
+        <nav class="navBar">
+            <img src="public/image/logo.jpg" alt="logo" class="logo">
+            <ul class="navItems">
+                
+                <!-- <li><a href="login.html" target="_blank">LOGIN</a></li> -->
+                <li><a href="http://localhost:3004/signup" target="_blank">SIGNUP</a></li>
+                <!-- <li>
+                    <a href="http://localhost:3004/comments" class="contact">
+                        <button>
+                            COMMENT
+                        </button>
+                    </a>
+                </li> -->
+            </ul>
+            
+        </nav>
+    </header>
+
+    <br>
+    <br>
+    <nav class="sportsNav">
+        <div class="activeSportsNav">
+            <a href="http://localhost:3004/cricket">LIVESCORE</a>
+        </div>
+         
+        <div class="deactiveSportsNav">
+            <a href="http://localhost:3004/cricket/result"> RESULT</a>
+        </div>
+
+        <div class="deactiveSportsNav">
+            <a href="http://localhost:3004/newsCricket.html">
+            NEWS
+        </a>
+        </div>
+
+        <!-- <div class="deactiveSportsNav">
+            RANKING
+        </div>
+
+        <div class="deactiveSportsNav">
+            STATISTICS
+        </div>
+
+        <div class="deactiveSportsNav">
+            NEWS
+        </div> -->
+    </nav>
+
+    <br>
+    <br>
+<hr width="70%" style="margin-left: 15%;">
+
+<section class="liveContent">
+    <br>
+    <h2>LIVE SCORE</h2>
+    <h2 id="msg" style="text-align: right;"></h2>
+    <br>
+    <div class="liveTitle"></div>
+    <br>
+    <span class="update">Day 2: Tea Break, India Trail By 324 Runs</span>
+    <br>
+    
+        <span class="liveScore"></span>
+      
+
+    <br>
+    
+    <span class="rr">CRR - 1.64</span>
+    <br>
+    <br>
+    <div class="scoreTables">
+    <table class="scoreCardBatsman">
+        <tr>
+            <td>Batsman</td>
+            <td>Runs</td>
+            <td>Balls</td>
+            <td>4's</td>
+            <td>6's</td>
+        </tr>
+        <tr>
+            <td class="batsman">Dominic Sebley</td>
+            <td class="batsmanrun">11</td>
+            <td class="ballsfaced">(42)</td>
+            <td class="fours">1</td>
+            <td class="sixes">0</td>
+        </tr>
+        <tr>
+            <td class="batsman2">Dominic Sebley</td>
+            <td class="batsmanrun2">11</td>
+            <td class="ballsfaced2">(42)</td>
+            <td class="fours2">1</td>
+            <td class="sixes2">0</td>
+        </tr>
+
+    </table>
+
+    <table class="scoreCardBowler">
+        <tr>
+            <td>Bowler</td>
+            <td>Overs</td>
+            <td>Runs</td>
+            <td>Wickets</td>
+        </tr>
+        <tr>
+            <td class="bowler"></td>
+            <td class="bowlerOvers"></td>
+            <td class="bowlerRuns"></td>
+            <td class="bowlerWickets"></td>
+        </tr>
+        <tr>
+            <td class="bowler1"></td>
+            <td class="bowlerOvers1"></td>
+            <td class="bowlerRuns1"></td>
+            <td class="bowlerWickets1"></td>
+        </tr>
+
+    </table>
+</div>
+<br>
+<br>
+<h2 class="recentBalls"></h2>
+<h2 class="lastwicket"></h2>
+
+</section>
+<p class="url" style="display: none;"><%= url %> </p>
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+const url1=document.querySelector(".url");
+console.log("dcfbrekhfr");
+
+ $(function(){
+    const url=url1.innerText;
+    getLiveScore(url);
+    setInterval(function(){ getLiveScore(url); }, 10000);
+
+    function getLiveScore(url) {
+
+      $("#msg").html("Updating score..");
+      $.getJSON(url,function(data) {
+
+        for (var key in data.livescore) {
+            if (data.livescore.hasOwnProperty(key)) {
+        console.log(key + " -> " + data.livescore[key]);
+        if(data.livescore[key]=='Data Not Found'){
+            data.livescore[key]='.'
+        }
+            }
+        }
+             console.log(data);
+         $(".liveTitle").html(data['livescore']['title']);  
+         $(".liveScore").html(data['livescore']['current']);
+         
+         $(".bowler").html(data['livescore']['bowler']);
+         $(".bowlerOvers").html(data['livescore']['bowlerover']); 
+         $(".bowlerRuns").html(data['livescore']['bowlerruns']);
+         $(".bowlerWickets").html(data['livescore']['bowlerwickets']);
+         $(".bowler1").html(data['livescore']['bowlertwo']);
+         $(".bowlerOvers1").html(data['livescore']['bowletworover']); 
+         $(".bowlerRuns1").html(data['livescore']['bowlertworuns']);
+         $(".bowlerWickets1").html(data['livescore']['bowlertwowickets']);
+
+         $(".batsman").html(data['livescore']['batsman']);
+
+         $(".batsmanrun").html(data['livescore']['batsmanrun']); 
+         $(".ballsfaced").html(data['livescore']['ballsfaced']);
+         $(".fours").html(data['livescore']['fours']);
+         $(".sixes").html(data['livescore']['sixes']);
+         $(".batsman2").html(data['livescore']['batsmantwo']);
+
+$(".batsmanrun2").html(data['livescore']['batsmantworun']); 
+$(".ballsfaced2").html(data['livescore']['batsmantwoballsfaced']);
+$(".fours2").html(data['livescore']['batsmantwofours']);
+$(".sixes2").html(data['livescore']['batsmantwosixes']);
+         $(".runrate").html(data['livescore']['runrate']);
+         $(".update").html(data['livescore']['update']);
+        
+        if(data['livescore']['recentballs']!='Data Not Found'){
+            $(".recentBalls").html('Recent Balls:-    '+data['livescore']['recentballs']);
+        }
+        if(data['livescore']['lastwicket']!=' | |'){
+            $(".lastwicket").html('Last Wicket:-    '+data['livescore']['lastwicket']);
+        }
+       
+         $("#msg").html(""); 
+
+          });
+    }  
+  }); 
+
+
+  
+
+
+
+</script>
+    
+</body>
+</html>

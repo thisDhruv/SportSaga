@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Rock+Salt:400');
+@import url("https://fonts.googleapis.com/css?family=Permanent+Marker:400");
+*{
+    margin:0;
+    padding: 0;
+    font-family: "montserrat",sans-serif;
+}
+body{
+    background-color: #24252A;
+}
+.navBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid white;
+    
+}
+.logo
+{
+    width: 15%;
+    cursor: pointer;
+}
+.navItems
+{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.navItems li{
+    display: inline-block;
+    margin: 20px 20px;
+}
+.navItems li a{
+    transition: all 1s ease;
+}
+.navItems li a:hover{
+    color: #a0c4ff;
+}
+.navItems li a button{
+   
+    transition: all 1s ease;
+    border:none;
+    background-color: #24252A;
+    color: white;
+}
+.navItems li a button:hover{
+    color: #a0c4ff;
+
+}
+.main{
+    height: 400px;
+    width: 50%;
+    position: relative;
+    /* border: 2px solid red; */
+    display: inline-block;
+    
+}
+.main:hover .omain{
+    height:210px ;
+}
+.main:hover .o1main{
+    height:210px ;
+}
+.main:hover .o2main{
+    height:210px ;
+}
+.main:hover .o3main{
+    height:190px ;
+}
+.main:hover .o4main{
+    height:210px ;
+}
+.main:hover .o5main{
+    height:190px ;
+}
+.main:hover .middle{
+    opacity: 1;
+}
+/* .ml3 {
+    font-weight: 900;
+    font-size: 2.7em;
+    font-family: Permanent Marker , Rock Salt, sans-serif;
+  } */
+.omain
+{
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    height: 200px;
+    /* width: 40%; */
+    opacity: 0.8;
+    transform: skewY(6deg);
+    transition: all .5s ease;
+    border-radius: 7px;
+}
+.o1main
+{
+    position: absolute;
+    top: 40px;
+    left: 120px;
+    height: 200px;
+    /* width: 40%; */
+    opacity: 0.7;
+    transform: skewY(-6deg);
+    transition: all 1s ease;
+    border-radius: 7px;
+}
+.o2main
+{
+    position: absolute;
+    top: 180px;
+    left: 40px;
+    height: 200px;
+    /* width: 40%; */
+    opacity: 0.5;
+    transform: skewX(8deg);
+    transition: all 1.5s ease;
+    border-radius: 7px;
+}
+.o3main
+{
+    position: absolute;
+    top: 200px;
+    left: 140px;
+    height: 180px;
+    /* width: 40%; */
+    opacity: 0.6;
+    transform: skewY(6deg);
+    transition: all 1.5s ease;
+    border-radius: 7px;
+}
+.o4main
+{
+    position: absolute;
+    top: 50px;
+    left: 430px;
+    height: 200px;
+    /* width: 40%; */
+    opacity: 0.8;
+    transform: skewY(6deg);
+    transition: all 1.5s ease;
+    border-radius: 7px;
+}
+.o5main
+{
+    position: absolute;
+    top: 200px;
+    left: 330px;
+    height: 180px;
+    /* width: 40%; */
+    opacity: 0.7;
+    transform: skewY(-6deg);
+    transition: all .5s ease;
+    border-radius: 7px;
+}
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%); 
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    
+  }
+ 
+.main1{
+    display:inline-block ;
+    height: 400px;
+    width: 45%;
+    position: relative;
+    /* border: 2px solid red; */
+}
+.main1:hover .omain1{
+    height:210px ;
+}
+.main1:hover .o1main1{
+    height:210px ;
+}
+.main1:hover .o2main1{
+    height:210px ;
+}
+.main1:hover .o3main1{
+    height:190px ;
+}
+.main1:hover .o4main1{
+    height:210px ;
+}
+.main1:hover .o5main1{
+    height:190px ;
+}
+.main1:hover .middle{
+    opacity: 1;
+}
+.ml3 {
+    font-weight: 900;
+    font-size: 2.7em;
+    font-family: Rock Salt, sans-serif;
+    color: white;
+  }
+.omain1
+{
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    height: 200px;
+    /* width: 40%; */
+    opacity: 0.8;
+    transform: skewY(6deg);
+    transition: all .5s ease;
+    border-radius: 7px;
+}
+.o1main1
+{
+    position: absolute;
+    top: 160px;
+    right: 120px;
+    height: 200px;
+    /* width: 40%; */
+    opacity: 0.7;
+    transform: skewY(-6deg);
+    transition: all 1s ease;
+    border-radius: 7px;
+}
+.o2main1
+{
+    position: absolute;
+    top: 180px;
+    right: 40px;
+    height: 200px;
+    /* width: 40%; */
+    opacity: 0.5;
+    transform: skewX(8deg);
+    transition: all 1.5s ease;
+    border-radius: 7px;
+}
+.o3main1
+{
+    position: absolute;
+    top: 200px;
+    right: 250px;
+    height: 200px;
+    /* width: 40%; */
+    opacity: 0.6;
+    transform: skewY(6deg);
+    transition: all 1.5s ease;
+    border-radius: 7px;
+}
+.o4main1
+{
+    position: absolute;
+    top: 15px;
+    right: 330px;
+    height: 200px;
+    /* width: 40%; */
+    opacity: 0.8;
+    transform: skewY(6deg);
+    transition: all 1.5s ease;
+    border-radius: 7px;
+}
+.o5main1
+{
+    position: absolute;
+    top: 200px;
+    right: 360px;
+    height: 200px;
+    /* width: 40%; */
+    opacity: 0.7;
+    transform: skewY(-6deg);
+    transition: all .5s ease;
+    border-radius: 7px;
+}
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%); 
+    text-align: center;
+    font-size: 25px;
+    color: #fcb1a6;
+    
+  }
+#contact{
+    background-color: #24252A;
+    color: white;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    
+} 
+.clogo{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    width: 30%;
+    margin-top: 10px;
+}
+.clogo img{
+    height: 40px;
+    width: 40px;
+    margin-left: 20px;
+    transition: all 1.5s ease;
+}
+.clogo img:hover{
+    width: 50px;
+    height: 45px;
+}
+.email{
+    font-size: 18px;
+    line-height: 25px;
+    color: white;
+}
+
+
+
+
+.aboutFooter{
+    width: 30%;
+}
+
+
+
+.contactFooter{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+  
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    color: white;
+    justify-content: space-evenly;
+    background-image: url('/image/baseball.jpg');
+    height: 300px;
+}
+
+.contactImages:hover{
+ transition: 0.3s;
+ scale: 1.2;
+}
+
+.contactImages{
+    height: 50px;
+    width: 50px;
+    margin: 7px;
+}
+
+.logoLinks{
+    display: flex;
+    flex-direction: row;
+}
+.logoLinks span{
+    background-color: white;
+    color: black;
+    font-weight: 800;
+    
+}
